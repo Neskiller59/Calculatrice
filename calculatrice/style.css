@@ -1,0 +1,70 @@
+*, ::before, ::after
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%  );
+    
+}
+.calculatrice
+{
+    background-color: rgb(69, 4, 130);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 5px black;
+
+}
+.ecran
+{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(114, 114, 231);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 5px; 
+    font-size: 25px;
+    
+}
+.touches
+{
+   display: grid;
+   grid-template-columns: repeat(4, 50px);
+   grid-template-rows: repeat(5, 50px);
+   grid-gap: 5px;
+}
+button{
+    border:none;
+    outline: none;
+    border-radius: 5px;
+    background-color: azure;
+    box-shadow: 0 3px black;
+    font-size: 18px;
+
+}
+button:active{
+    box-shadow: 0 1px black;
+    transform: translateY(2px);
+}
+button[data-key="C"]{
+    background-color: orange;
+    color: azure;
+}
+button[data-key="="]{
+    grid-column: span 2;
+    background-color: green;
+    color: azure;
+    font-size: 20px;
+}
